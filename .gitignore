@@ -1,0 +1,49 @@
+# See https://help.github.com/articles/ignoring-files for more about ignoring files.
+
+# Ruby / Bundler
+/vendor/bundle
+/.bundle
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Rails
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+/storage/*
+!/storage/.keep
+
+# Node
+/node_modules
+
+# Database
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Vite
+/public/vite*
+
+# Credentials
+config/master.key
+config/credentials/*.key
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
+/coverage/
+
+# Docker
+docker-compose.override.yml
