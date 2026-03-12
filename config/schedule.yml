@@ -1,0 +1,11 @@
+webrtc_session_cleanup:
+  cron: "*/2 * * * *"
+  class: WebrtcSessionCleanupWorker
+  queue: critical
+  description: "Evict stale WebRTC participants (missed WebSocket disconnect)"
+
+message_retention:
+  cron: "0 3 * * *"
+  class: MessageRetentionWorker
+  queue: low
+  description: "Purge messages beyond retention window (default 30 days)"
